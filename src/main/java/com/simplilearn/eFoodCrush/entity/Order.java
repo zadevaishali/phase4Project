@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 
@@ -18,6 +19,7 @@ public class Order {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int orderId;
 	
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name="user_id")
 	private User user;

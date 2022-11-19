@@ -58,7 +58,7 @@ public class CartController {
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<ApiResponse> deleteFruit(@PathVariable int id) {
+	public ResponseEntity<ApiResponse> deleteFood(@PathVariable int id) {
 		cartService.deleteCartItem(id);
 		ApiResponse apiResponse = new ApiResponse(OK, "Cart item deleted successfully");
 		return new ResponseEntity<>(apiResponse, OK);

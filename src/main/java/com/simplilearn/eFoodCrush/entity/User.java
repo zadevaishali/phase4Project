@@ -50,10 +50,10 @@ public class User {
 		
 		if(this.role.equals("role_user"))
 		{
-			String[] userAuthoritites = { "fruit:read, cart:read, cart:update, cart:write, order:read, order:write" };
+			String[] userAuthoritites = { "food:read, cart:read, cart:update, cart:write, order:read, order:write" };
 			this.setAuthorities(userAuthoritites);
 		} else if (this.role.equals("role_admin")) {
-			String[] adminAuthoritites = { "fruit:read, fruit:write, cart:update, order:read" };
+			String[] adminAuthoritites = { "food:read, food:write, cart:update, order:read" };
 			this.setAuthorities(adminAuthoritites);
 		}
 		

@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 @Data
@@ -18,6 +18,7 @@ public class Cart {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 	
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name="user_id")
 	private User user;
